@@ -1,0 +1,27 @@
+.side-panel {
+    float: left;
+    margin-left: 1em;
+    margin-top: 1em;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 1px solid black;
+    width: 267px;
+    background-color: black;
+}
+
+.side-panel > h2 {
+    color: Grey;
+    cursor: pointer;
+    cursor: hand; 
+}
+
+.side-panel > h2:hover {
+    color: aliceblue;
+    -webkit-transition:color 500ms linear;
+    -ms-transition: color 500ms linear;
+    transition: color 500ms linear;
+}
+
+.homeScreenImg {
+    height: 200px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--The viewport meta tag controls page's dimensions and scaling
+        http://www.w3schools.com/css/css_rwd_viewport.asp-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RR - Search Resumes</title>
+    <link rel="stylesheet" href="apocryphon.css">
+    <link rel="stylesheet" href="searchResume.css">
+    <script src="searchResume.js"></script>
+</head>
+<body>
+    <header id="header">
+        <img class="cover-photo" src="http://www.suitandtiehealth.com/hs-fs/hubfs/suit_black_-_background.jpg?t=1481788246826&width=1920&name=suit_black_-_background.jpg">
+        <div class="cover-black"></div>
+        <div class="header-title"><span id="headerResume">Resume</span><span id="headerRoast"> Roast</span></div>
+        <div id="headerMenu">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="searchResume.html">Search Resumes</a>
+                <a href="profile.html">Profile</a>
+                <a href="signIn.html">Sign In</a>
+                <a href="signUp.html">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+    <div class="interface">
+        <h1>Search Resumes Mock Up, Needs a reply system and Resume select</h1>
+        <div class="resumeList">
+            <h2>Resume 1</h2>
+            <h2>Resume 2</h2>
+            <h2 class="resumeSelected">Resume 3</h2>
+            <h2>Resume 4</h2>
+        </div>
+        <div class="commentInterface">
+            <div>
+                <input id="inputPostText" class="input_text test-input_text inputSection test--input_text" type="text">
+                <button type="submit" class="input_button test-input_button submitSection test--input_button" onclick="textPostSubmit()">Text Post</button>
+            </div>
+
+            <div>
+                <input id="inputPostImg" class="inputText inputSection test--photo_url" type="text" value="https://image.freepik.com/free-vector/modern-abstract-background_1048-1003.jpg">
+                <button class="submitSection test--photo_button" type="submit" onclick="imgPostSubmit()">Photo Post</button>
+            </div>
+
+            <div class="filterPost">
+                <span>Filter: </span>
+                <select id="filterPosts" onchange="onChangeSelectFilter()">
+                  <option value="0" selected="selected">Show images and text</option>
+                  <option value="1">Show only text posts</option>
+                  <option value="2">Show only image posts</option>
+                </select>
+            <div>
+
+            <h2>Posts for a given resume</h2>
+            <div id="postContainer">
+                <!-- <div class="post test--post postImg"><img class=" postImgElement" src="https://image.freepik.com/free-vector/modern-abstract-background_1048-1003.jpg"><article class="postBottom"><button class="postLikeButton test--like_button">Like Button</button><span>Like counter:</span><span id="post0" class="test--like_count">0</span></article></div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- <footer class="footer">
+        <p>Thank you for visting!</p>
+    </footer> -->
+</body>
+<footer>
+    <img class="footer-img" src="http://farmingtonlibraries.org/wp-content/uploads/2015/07/NYC-skyline.jpg">
+</footer>
+</html>
