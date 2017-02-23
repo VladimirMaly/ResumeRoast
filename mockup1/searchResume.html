@@ -30,9 +30,10 @@
     <div ng-app="myApp" ng-controller="myCtrl" class="interface">
         <div class="resumeList">
         	<div ng-repeat="user in resumeList">
-        	<div class="eachUserResume" ng-click="changeChosen(user)"><span>Name: {{user.Name}} </span><span>Date: {{user.Date}} </span></div>
+            	<div class="eachUserResume" ng-class="{selected : ($parent.chosen.Id -1) == $index}" ng-click="changeChosen(user)"><span>Name: {{user.Name}} </span><span>Date: {{user.Date}} </span>
+                </div>
+            </div>
         </div>
-
         <div class="commentInterface">
         <!-- src="http://www.peelyouthsuccess.com/documents/136m_Sample%20resumes%20and%20cover%20letters.pdf" -->
         	<iframe ng-src="{{chosen.pdfFile}}" id="previewPdf" style="width:600px; height:500px;" frameborder="0"></iframe> <!-- ng-src="{{chosen.pdfFile}}" -->
