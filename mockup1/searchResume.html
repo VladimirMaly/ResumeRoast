@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="apocryphon.css">
     <link rel="stylesheet" href="searchResume.css">
     <script src="searchResume.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="searchResumeNg.js"></script>
 </head>
 <body>
     <header id="header">
@@ -25,15 +27,15 @@
             </nav>
         </div>
     </header>
-    <div class="interface">
-        <h1>Search Resumes Mock Up, Needs a reply system and Resume select</h1>
+    <div ng-app="myApp" ng-controller="myCtrl" class="interface">
         <div class="resumeList">
-            <h2>Resume 1</h2>
-            <h2>Resume 2</h2>
-            <h2 class="resumeSelected">Resume 3</h2>
-            <h2>Resume 4</h2>
+        	<div ng-repeat="user in resumeList">
+        	<div class="eachUserResume" ng-click="changeChosen(user)"><span>Name: {{user.Name}} </span><span>Date: {{user.Date}} </span></div>
         </div>
+
         <div class="commentInterface">
+        <!-- src="http://www.peelyouthsuccess.com/documents/136m_Sample%20resumes%20and%20cover%20letters.pdf" -->
+        	<iframe ng-src="{{chosen.pdfFile}}" id="previewPdf" style="width:600px; height:500px;" frameborder="0"></iframe> <!-- ng-src="{{chosen.pdfFile}}" -->
             <div>
                 <input id="inputPostText" class="input_text test-input_text inputSection test--input_text" type="text">
                 <button type="submit" class="input_button test-input_button submitSection test--input_button" onclick="textPostSubmit()">Text Post</button>
@@ -59,12 +61,5 @@
             </div>
         </div>
     </div>
-
-    <!-- <footer class="footer">
-        <p>Thank you for visting!</p>
-    </footer> -->
 </body>
-<footer>
-    <img class="footer-img" src="http://farmingtonlibraries.org/wp-content/uploads/2015/07/NYC-skyline.jpg">
-</footer>
 </html>

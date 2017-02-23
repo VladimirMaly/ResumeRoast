@@ -44,6 +44,9 @@ function createMessage(insertField, isTextMessage) {
     	upVote(postCounter);
 	}, false);*/
 	var postNumberString = "post" + postCounter;
+	/*button.addEventListener("click", function(e) {
+    	upVote(postNumberString);
+	}, false);*/
 	button.onclick = function() {
 		upVote(postNumberString);
 	};

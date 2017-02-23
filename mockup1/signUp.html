@@ -27,7 +27,7 @@
     </header>
     <div class="interface">
         <h1>Sign Up</h1>
-        <form id="signUp" method="post" onsubmit="return validateSignUp()">
+        <form action="profile.html" id="signUp" method="post" onsubmit="return validateSignUp()">
             <div class="form-element"><input class="input-element" type="text" name="Full Name" placeholder="Full Name"autofocus required></div>
             <div class="form-element"><input class="input-element" type="email" name="Email" placeholder="Email" required></div>
             <div class="form-element"><input onkeyup="onChangeValidateSignUp()" class="input-element-with-button" id="inputElementPassword" type="password" name="Password" placeholder="Password" required><div class="show-password"><button type="button" onmousedown="revealPassword('inputElementPassword')" onmouseup="concealPassword('inputElementPassword')">&#8592</button></div></div>
